@@ -54,12 +54,12 @@ namespace Software_Lab4_Task2
                     string.IsNullOrWhiteSpace(textBoxC.Text) || comboBoxN.SelectedItem == null ||
                     comboBoxR.SelectedItem == null)
                 {
-                    throw new ArgumentException("Все поля должны быть заполнены");
+                    throw new ArgumentException("Р’СЃРµ РїРѕР»СЏ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ Р·Р°РїРѕР»РЅРµРЅС‹");
                 }
 
                 if (!radioButton1.Checked && !radioButton2.Checked)
                 {
-                    throw new ArgumentException("Выберите уравнение для расчета");
+                    throw new ArgumentException("Р’С‹Р±РµСЂРёС‚Рµ СѓСЂР°РІРЅРµРЅРёРµ РґР»СЏ СЂР°СЃС‡РµС‚Р°");
                 }
 
                 double X = Convert.ToDouble(textBoxX.Text);
@@ -84,12 +84,12 @@ namespace Software_Lab4_Task2
             }
             catch (FormatException)
             {
-                MessageBox.Show("Ошибка формата данных. Проверьте правильность введенных числовых значений.",
-                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("РћС€РёР±РєР° С„РѕСЂРјР°С‚Р° РґР°РЅРЅС‹С…. РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РІРІРµРґРµРЅРЅС‹С… С‡РёСЃР»РѕРІС‹С… Р·РЅР°С‡РµРЅРёР№.",
+                    "РћС€РёР±РєР°", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "РћС€РёР±РєР°", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
